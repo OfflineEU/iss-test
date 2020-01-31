@@ -1,0 +1,77 @@
+.iss-location {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 70% 25%;
+  grid-gap: .5rem;
+
+  & > div {
+    background-color: rgba(0, 22, 122, 0.1);
+    border-radius: .5rem;
+    margin: .5rem;
+    padding: 1rem;
+  }
+
+  &-info {
+
+    p {
+      &:first-of-type {
+        font-weight: 900;
+      }
+    }
+  }
+
+  &-time {
+    span {
+      display: block;
+    }
+  }
+
+  &-astronauts {
+    .astronaut {
+      p {
+        position: relative;
+        margin: 1rem 0 2rem;
+        padding: 1rem 0 1rem 4rem;
+        border: 1px solid #62319c;
+        border-radius: .5rem;
+        font-size: 2rem;
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: .5rem;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 24px;
+          height: 24px;
+          background: url(".././assets/img/astronaut.png");
+          background-size: cover;
+        }
+      }
+
+      &-total {
+        height: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+
+        p {
+        }
+      }
+    }
+  }
+}
+
+.loader {
+  position: absolute;
+  top: calc(50% - 64px);
+  left: calc(50% - 64px);
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  perspective: 800px;
+}
+
+#map {
+  height: 100%;
+}

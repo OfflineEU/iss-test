@@ -1,1 +1,97 @@
-/* You can add global styles to this file, and also import other style files */
+@import "fonts";
+
+$dataColor: #62319c;
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background: rgb(226, 203, 241);
+  background: linear-gradient(90deg, rgba(226, 203, 241, 1) 0%, rgba(255, 210, 210, 1) 50%, rgba(255, 227, 188, 1) 100%);
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  max-width: 110rem;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+}
+
+p {
+  margin: 0;
+  font-size: 1.6rem;
+
+  span {
+    color: $dataColor;
+    font-weight: 900;
+  }
+}
+
+h1 {
+  text-align: center;
+  font-size: 32px;
+}
+
+hr {
+  width: 95%;
+}
+
+//loader
+.inner {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.inner.one {
+  left: 0;
+  top: 0;
+  animation: rotate-one 1s linear infinite;
+  border-bottom: 7px solid #4c5389;
+}
+
+.inner.two {
+  right: 0;
+  top: 0;
+  animation: rotate-two 1s linear infinite;
+  border-right: 7px solid #dc3545;
+}
+
+.inner.three {
+  right: 0;
+  bottom: 0;
+  animation: rotate-three 1s linear infinite;
+  border-top: 7px solid #28a745;
+}
+
+@keyframes rotate-one {
+  0% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-two {
+  0% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-three {
+  0% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+  }
+}
+
